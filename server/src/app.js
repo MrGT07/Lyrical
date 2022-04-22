@@ -12,9 +12,9 @@ app.use(bodyparser.json())
 app.use(cors())
 
 // Request Types: get, post, put, patch, delete
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
     res.send({
-        message: 'hello world'
+        message: `Hello ${req.body.email}! You're registered successfully!`
     })
 })
 
